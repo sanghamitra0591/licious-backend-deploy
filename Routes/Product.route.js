@@ -39,7 +39,7 @@ productRouter.get("/", async(req, res)=>{
                         res.send(data);
                     }
                 }else{
-                    const data= await ProductModel.find({category, subcat,});
+                    const data= await ProductModel.find({category, subcat});
                     res.send(data);
                 }
             }else{
