@@ -37,6 +37,9 @@ productRouter.get("/", async(req, res)=>{
                     const data= await ProductModel.find({category,  $lt: { weight: 500 } });
                     res.send(data);
                 }
+            }else{
+                const data= await ProductModel.find({category});
+                res.send(data);
             }
         }else{
             if(sort && pack){
@@ -69,6 +72,9 @@ productRouter.get("/", async(req, res)=>{
                     const data= await ProductModel.find({ $lt: { weight: 500 } });
                     res.send(data);
                 }
+            }else{
+                const data= await ProductModel.find();
+                res.send(data);
             }
         }
         // const data= await ProductModel.find(query);
