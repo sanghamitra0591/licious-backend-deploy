@@ -1,7 +1,7 @@
 const express = require("express");
 const { connection } = require("./configs/db");
-const { productRouter } = require("./routes/Product.route");
-const { userRouter } = require("./routes/User.route");
+const { productRouter } = require("./Routes/Product.route");
+const { userRouter } = require("./Routes/User.route");
 
 const app = express();
 
